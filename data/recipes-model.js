@@ -5,8 +5,8 @@ module.exports = {
   getInstructions
 };
 
-function getRecipes() {
-  return db("recipes as r");
+function getRecipes(id) {
+  return db("recipes as r").where({id});
 }
 
 function getShoppingList(id) {
